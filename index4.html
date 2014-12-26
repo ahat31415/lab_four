@@ -1,0 +1,119 @@
+<html>
+<head>
+<style>
+.class1 {
+        width: 300px;
+        height:120px;
+        background-color:255255;
+        color:red;
+        font-size:15px ;
+		position: relative;
+       }
+.coteiner {
+          width: 1920px;
+          height:1080px;
+          background-color:#81F7D8;         
+          }
+.spicial_for_table{
+				   width: 600px;
+                   height:230px;
+                   background-color:#800000;   
+                  }
+.table_div{
+          width: 1920px;
+          height:1080px;
+          }
+.table_cont{
+           	width: 600px;
+            height:230px;
+            background-color:#800000;
+           }
+td {border:670px;
+width:100px;
+heihgt:500px
+}
+</style>
+
+<script type="text/javascript">
+var tutu,tutu2,elm;
+function f_click()
+{
+tutu='<table bgcolor=#800000  border=1px id="table">';
+tutu2='<table bgcolor=#800000  border=1px id="table2">';
+
+for(j=1; j<=10; j++) {
+tutu=tutu+'<tr>';
+for(i=1; i<=10; i++) {
+                     num=Math.floor(Math.random( ) * (100+1));;
+					 if (num>20) {tutu=tutu+'<td bgcolor=#FFFF99>' +num+'</td>'; tutu2=tutu2+'<td>' +num+'</td>'; }
+					 else{tutu=tutu+'<td>' +num+'</td>';tutu2=tutu2+'<td>' +num+'</td>'}
+                     }
+tutu=tutu+'</tr>';
+tutu2=tutu2+'</tr>';
+
+				   }
+
+tutu=tutu+'</table>';
+tutu2=tutu2+'</table>';
+//alert(tutu);
+document.getElementById("cont").innerHTML=tutu2;
+}
+
+
+function f2_click()
+{
+var table=document.getElementById("Table2");
+for (var i=0; i<table2.rows.length; i++) 
+                                      {
+									  for (var j=0; j<table2.rows[0].cells.length; j++) {
+									                                                    var TD=table2.rows[i].cells[j];
+                                                                                        if ( (TD.innerHTML) > 20 ) {TD.style.backgroundColor="#6A5ACD";}
+																						}
+                                      }
+}
+</script>
+</head>
+
+
+<body class="coteiner" >
+<form>
+<div class="class1" >
+<input type="button" value="Заполнить" onclick='f_click()'/>
+<input type="button" value="Выделить" onclick='f2_click()'/>
+</div>
+
+<div class="table_cont">
+<div class="spicial_for_table" id="cont">
+Здесь будет таблица
+</div>
+</div>
+
+</form>
+</body>
+</html>
+<!--
+elm = document.getElementById("cont");
+
+if(elm.style.visibility == "visible")
+				{
+					elm.style.visibility = "hidden";
+				}
+				else
+				{
+					elm.style.visibility = "visible";
+				}
+				
+}
+
+
+//alert('111');
+//tutu=parseInt(document.getElementById("get").value);
+//document.getElementById("getback").value=string(tutu);
+//tutu=(document.getElementById("get").value);
+//document.getElementById("getback").value=String(2.52*tutu);
+
+//tutu='<table borderwidth=10px bordercolor=red>';
+//tutu='<tr><td>' +Math.floor(Math.random( ) * (100+1))+'</td><td>e5yaey</td><td>rdhtszerth</td></tr>';
+//tutu='</table>';
+//document.getElementById("cont").value=String(tutu);
+-->
